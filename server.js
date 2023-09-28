@@ -6,13 +6,13 @@ const cookieParser = require("cookie-parser");
 const app = express();
 require("dotenv").config();
 
-//const uri = process.env.DBUIR;
-const uri = "mongodb://localhost:27017/aiproject";
+const uri = process.env.DBUIR;
+//const uri = "mongodb://localhost:27017/aiproject";
 app.use(
   cors({
     credentials: true,
-    origin: "http://localhost:3000",
-    //origin: "https://blog-app-client-73he.onrender.com",
+    //origin: "http://localhost:3000",
+    origin: "https://aiimage-4d0y.onrender.com",
   })
 );
 app.use(cookieParser());
