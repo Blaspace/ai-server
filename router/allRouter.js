@@ -6,6 +6,7 @@ const handleRefresh = require("../controler/handleRefresh");
 const handleLogout = require("../controler/handleLogout");
 const handleStripe = require("../controler/handleStripe");
 const createClientSecret = require("../controler/CreateClientsecret");
+const handleGetUser = require("../controler/handlegetUser");
 
 const router = express.Router();
 
@@ -14,6 +15,8 @@ router.get("/", (req, res) => {
 });
 
 router.post("/image", genImage);
+
+router.post("/user", handleGetUser);
 
 router.post("/secret", createClientSecret);
 
